@@ -1,0 +1,39 @@
+<form (submit)="onLoginSubmit()">
+  <mat-card>
+    <mat-card-title>
+      <h1>Login</h1>
+      <a [routerLink]="['/register']">Don't have an account yet? Sign Up</a>
+    </mat-card-title>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="username"
+        placeholder="username or email"
+        [(ngModel)]="username"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="password"
+        name="password"
+        [(ngModel)]="password"
+      />
+    </mat-form-field>
+    <button mat-raised-button="primary" type="submit" value="Login">
+      Login
+    </button>
+  </mat-card>
+</form>
+
+<!--
+  form (submit)="onLoginSubmit()">
+    <input matInput type="text" name="username" [(ngModel)]="username">
+    <input matInput type="password" name="password" [(ngModel)]="password">
+    <input type="submit" value="Login">
+
+  </form
+-->

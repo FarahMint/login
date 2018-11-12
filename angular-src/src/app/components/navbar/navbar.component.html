@@ -1,0 +1,60 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span
+      [routerLinkActive]="['active']"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/']"
+      class="brand"
+      >BLab</span
+    >
+    <div class="icon-spacer" *ngIf="auth.loggedIn()">
+      <button
+        mat-raised-button
+        color="accent"
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/dashboard']"
+      >
+        Dashboard
+      </button>
+    </div>
+
+    <span class="spacer"></span>
+    <div class="icon-spacer" *ngIf="auth.loggedIn()">
+      <mat-icon
+        mat-icon-button
+        [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/profile']"
+        >account_circle</mat-icon
+      >
+      <button mat-raised-button color="primary" (click)="onLogout()">
+        Logout
+      </button>
+    </div>
+
+    <!--
+      ng-template #showLogin>
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/login']"
+        >
+          Login
+        </button>
+
+        <button
+          mat-raised-button
+          color="primary"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/register']"
+        >
+          Register
+        </button>
+      </ng-template
+    -->
+  </mat-toolbar-row>
+</mat-toolbar>

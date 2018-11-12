@@ -1,0 +1,42 @@
+.spacer {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+mat-toolbar {
+  color: #fefefe;
+  /* background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%); */
+  background: rgba(0, 0, 0, 0.9);
+}
+span,
+mat-icon {
+  outline: transparent;
+  cursor: pointer;
+}
+
+div.icon-spacer {
+  display: flex;
+  justify-content: space-between;
+}
+.brand {
+  font-weight: 300;
+  font-size: 2rem;
+}
+div.icon-spacer button {
+  margin-left: 1.5rem;
+}
+
+mat-icon {
+  font-size: 40px;
+}
+
+@media screen and (min-width: 700px) {
+  mat-icon {
+    margin-right: 2rem;
+    font-size: 53px;
+    margin-top: -10px;
+  }
+  div.icon-spacer button {
+    margin-left: 3rem;
+  }
+}

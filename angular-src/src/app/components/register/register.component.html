@@ -1,0 +1,60 @@
+<form (submit)="onRegisterSubmit()">
+  <mat-card>
+    <mat-card-title> <h1>Register</h1> </mat-card-title>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="name"
+        name="name"
+        placeholder="Enter your name"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="username"
+        placeholder="username"
+        [(ngModel)]="username"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        placeholder="Enter your email"
+        [(ngModel)]="email"
+        name="email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Enter a password"
+        name="password"
+        [(ngModel)]="password"
+      />
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" value="Register">
+        Register Now
+      </button>
+    </mat-card-actions>
+    <mat-card-footer>
+      <a [routerLink]="['/login']">Already have a account? Sign In</a>
+    </mat-card-footer>
+  </mat-card>
+</form>
+
+<!--
+  form (submit)="onRegisterSubmit()">
+    <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name">
+    <input type="text" placeholder="Choose a username" [(ngModel)]="username" name='username'>
+    <input type="email" placeholder="Enter your email" [(ngModel)]="email" name='email'>
+    <input type="text" placeholder="Enter a password" [(ngModel)]="password" name='password'>
+    <input type="submit" value="Submit">
+  </form
+-->

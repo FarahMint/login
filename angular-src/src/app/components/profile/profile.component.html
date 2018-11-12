@@ -1,0 +1,11 @@
+<mat-card *ngIf="user">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>Your profile</mat-card-title>
+  </mat-card-header>
+  <!-- img mat-card-image src="#" alt="your profile avatar" -->
+  <mat-card-content>
+    <p>{{ user.username }}</p>
+    <p>{{ user.email }}</p>
+  </mat-card-content>
+</mat-card>
